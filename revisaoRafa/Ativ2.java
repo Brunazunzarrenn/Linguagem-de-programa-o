@@ -4,7 +4,7 @@ public class Ativ2 {
 	
 
 	    public static void main(String[]args) {
-	        // 2)  Criar um algoritmo que leia 10 números. Imprima quantos números são pares e quantos são ímpares. O valor 0 (zero) deve ser desconsiderado. 
+	     
 	        Scanner ler = new Scanner(System.in);
 	        int numero, qtdImpar =0, qtdPar = 0 ;
 
