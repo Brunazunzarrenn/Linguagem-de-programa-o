@@ -1,33 +1,41 @@
-package teste;
-import java.util.Scanner;
+package br.com.revisao;
+import java.awt.*;
+
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Ativ3 {
 
-	    public static void main(String [] args) {
+    public static void main(String[] args) {
 
-	  Scanner ler = new Scanner(System.in);
-	  int numero, qtdPos=0, qtdNeg=0, somPos=0, somNeg=0;
+        JFrame janela = new JFrame("Bem - Vindo");
 
-	System.out.println("Entre com 15 números inteiros: ");
+        JLabel nome =new JLabel("Nome ");
+        JLabel email =new JLabel("E-mail");
+        JButton butao = new JButton("OK");
+        
+                JTextField tfname = new JTextField();
+                JTextField tfEmail = new JTextField();
+
+        JPanel painel = new JPanel();
+
+        painel.add(nome);
+        painel.add(tfname);
+        painel.add(email);
+        painel.add(tfEmail);
+        painel.add(butao);
+
+        painel.setLayout(new GridLayout(3, 2, 5, 5));
 
 
-	  for (int i = 0; i < 15 ; i++) {
-	    numero = ler.nextInt();
-	    if (numero == 0){
-	        System.out.println("Zero é invalido.  Desconsiderado pelo programa");
-	        i--;
-	    }else{ 
-	        if(numero > 0 ){ qtdPos++;}
-	            else if(numero < 0 ){qtdNeg++;}
-	         if(numero % 2 == 0){ somPos+=numero; } 
-	            else if(numero % 2 != 0){ somNeg += numero;}
-	    }
-	}
+        janela.getContentPane().add(painel);
+        janela.setSize(300,200);
+        janela.setVisible(true);
 
-	System.out.println("quantidade de números positivos : "+ qtdPos);
-	System.out.println("quantidade de números negativos : "+ qtdNeg);
-	System.out.println("soma de todos os valores negativos : " + somNeg);
-	System.out.println("soma de todos os valores positivos : " + somPos);
-	  
-	    }
-	}
+    }
+
+}
