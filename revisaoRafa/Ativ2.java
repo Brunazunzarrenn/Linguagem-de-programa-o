@@ -24,8 +24,6 @@ public class Ativ2 {
 	}
 	System.out.println("A quantidade de numeros impares é "+ qtdImpar); 
 	System.out.println("A quantidade de numeros Pares é "+ qtdPar);
-
-	    ler.close();
 	    }
 	}
 
