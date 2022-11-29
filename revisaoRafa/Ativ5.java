@@ -24,7 +24,7 @@ public class Ativ5 {
 	            System.out.println("Valor : "+ preco[i]);
 	            System.out.println();
 	        }
-	        ler.close();
+
 	    
 	    }
 	
