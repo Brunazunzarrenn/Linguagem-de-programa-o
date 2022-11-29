@@ -1,30 +1,71 @@
-package teste;
-import java.util.Scanner;
+package br.com.revisao;
+
+import javax.swing.*;
+import java.awt.*;
+
+
 public class Ativ4 {
-	
-	    public static void main (String[]args){
 
-	    System.out.println("Entre com 5 números inteiros: ");
+    public static void main(String[] args) {
+        JFrame janela = new JFrame("Calculator");
+        JPanel painelTeclas = new JPanel(null);
+        JPanel painelAreaTexto = new JPanel(null);
+        Color corBackGround = new Color(128, 128, 128);
 
-	        Scanner ler = new Scanner(System.in);
+        JTextArea jtAreaTexto = new JTextArea();
 
-	        int vet [] = new int [5];
+        JButton jbSete = new JButton("7");
+        JButton jbOito = new JButton("8");
+        JButton jbNove = new JButton("9");
+        JButton jbDivisao = new JButton("/");
+        JButton jbQuatro = new JButton("4");
+        JButton jbCinco = new JButton("5");
+        JButton jbSeis = new JButton("6");
+        JButton jbMultiplicação = new JButton("*");
+        JButton jbUm = new JButton("1");
+        JButton jbDois = new JButton("2");
+        JButton jbTres = new JButton("3");
+        JButton jbPonto = new JButton(".");
+        JButton jbZero = new JButton("0");
+        JButton jbMenos = new JButton("-");
+
+        JButton jbIgual = new JButton("=");
+        JButton jbMais = new JButton("+");
+
+        painelTeclas.add(jbSete);
+        painelTeclas.add(jbOito);
+        painelTeclas.add(jbNove);
+        painelTeclas.add(jbDivisao);
+        painelTeclas.add(jbQuatro);
+        painelTeclas.add(jbCinco);
+        painelTeclas.add(jbSeis);
+        painelTeclas.add(jbMultiplicação);
+        painelTeclas.add(jbUm);
+        painelTeclas.add(jbDois);
+        painelTeclas.add(jbTres);
+        painelTeclas.add(jbPonto);
+        painelTeclas.add(jbZero);
+        painelTeclas.add(jbMenos);
+        painelTeclas.add(jbIgual);
+        painelTeclas.add(jbMais);
 
 
-	        for (int i = 0; i < 5; i++) {
-	            vet[i] = ler.nextInt();
-	            if (vet[i] % 2 != 0 ) {
-	                vet[i] *= 10;
-	            }
-	        }
-	        for (int i = 0; i < 5; i++) {
-	            System.out.println("vetot de indice  "+i+" : "+ vet[i]);
-	            
-	        }
+
+        painelAreaTexto.add(jtAreaTexto);
+
+        painelTeclas.setLayout(new GridLayout(4, 4, 5, 5));
+        painelAreaTexto.setLayout(new GridLayout(1, 1, 5, 5));
+        janela.setLayout(new GridLayout(2, 1, 5, 5));
 
 
+        janela.setSize(300, 300);
+        painelAreaTexto.setBackground(corBackGround);
+        painelTeclas.setBackground(corBackGround);
 
 
-	        ler.close();
-	    }
-	}
+        janela.add(jtAreaTexto);
+        janela.add(painelTeclas);
+        janela.setVisible(true);
+    }
+
+}
