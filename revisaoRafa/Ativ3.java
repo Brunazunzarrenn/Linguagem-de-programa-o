@@ -28,6 +28,6 @@ public class Ativ3 {
 	System.out.println("quantidade de números negativos : "+ qtdNeg);
 	System.out.println("soma de todos os valores negativos : " + somNeg);
 	System.out.println("soma de todos os valores positivos : " + somPos);
-	    ler.close();
+	  
 	    }
 	}
