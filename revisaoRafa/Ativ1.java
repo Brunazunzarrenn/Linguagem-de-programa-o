@@ -2,7 +2,7 @@ package br.com.revisao;
 
 import javax.swing.JOptionPane;
 
-public class Exercicio1 {
+public class Ativ1 {
     public static void main(String[] args) {
         String jogador = "";
         String selecao = "";
